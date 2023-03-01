@@ -59,5 +59,6 @@ Connected to DB
 
 ### Testing on Postman
 
-Open this [WorkSpace](https://elements.getpostman.com/redirect?entityId=19299357-deed8b97-7f1d-4200-bd0c-71e3e15561a3&entityType=collection) and select the **NoSQL Demo** collection.
-Modify the endpoints and test the API
+The link below will direct you to a Postman Collection where you can test CRUD operations on the available endpoints.
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/19299357-deed8b97-7f1d-4200-bd0c-71e3e15561a3?action=collection%2Ffork&collection-url=entityId%3D19299357-deed8b97-7f1d-4200-bd0c-71e3e15561a3%26entityType%3Dcollection%26workspaceId%3Daf37ab1a-9a01-4d07-8699-a4fd52bfd7c0)
