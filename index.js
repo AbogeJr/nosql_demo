@@ -1,9 +1,10 @@
 const express = require("express");
-const mongoose = require("mongoose");
+const { dbConn } = require("./config");
 const dotenv = require("dotenv");
 const { getPost, setPost, deletePost, updatePost } = require("./controllers");
-dotenv.config();
+// dotenv.config();
 
+dbConn();
 // Initalizing the app
 const app = express();
 
@@ -16,16 +17,6 @@ const port = 5000;
 
 // Initialize router
 const router = express.Router();
-
-// MongoDB connection
-mongoose
-  .connect(
-    `mongodb+srv://aj:${process.env.MONGO_PASSWORD}@cluster0.4emqylg.mongodb.net/?retryWrites=true&w=majority`
-  )
-  .then(
-    (response) => console.log("Connected to DB"),
-    (err) => console.log("Some error")
-  );
 
 // Settng up Routes
 router.route("/").get(getPost).post(setPost);
