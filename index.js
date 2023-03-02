@@ -1,6 +1,7 @@
 const express = require("express");
 const { dbConn } = require("./config");
 const dotenv = require("dotenv");
+const cors = require("cors");
 const { getPost, setPost, deletePost, updatePost } = require("./controllers");
 // dotenv.config();
 
@@ -11,6 +12,9 @@ const app = express();
 //Middleware for form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Enabling CORS
+app.use(cors());
 
 // Port for the server
 const port = 5000;
